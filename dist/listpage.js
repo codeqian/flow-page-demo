@@ -77,14 +77,14 @@ var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(10)
+__vue_styles__.push(__webpack_require__(5)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(11)
+__vue_exports__ = __webpack_require__(6)
 
 /* template */
-var __vue_template__ = __webpack_require__(5)
+var __vue_template__ = __webpack_require__(7)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -121,51 +121,104 @@ new Vue(module.exports)
 /* 5 */
 /***/ (function(module, exports) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["mainBody"]
-  }, [_c('text', {
-    staticClass: ["hintText"],
-    on: {
-      "click": _vm.jumpIn
-    }
-  }, [_vm._v("back")])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 6 */,
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */
-/***/ (function(module, exports) {
-
 module.exports = {
   "mainBody": {
     "height": 100,
     "width": 100
   },
+  "titleBar": {
+    "paddingTop": 10 * CSS_UNIT.PT,
+    "paddingRight": 10 * CSS_UNIT.PT,
+    "paddingBottom": 10 * CSS_UNIT.PT,
+    "paddingLeft": 10 * CSS_UNIT.PT,
+    "backgroundColor": "#0099ff"
+  },
+  "menuBody": {
+    "display": "inline-block",
+    "paddingTop": 10 * CSS_UNIT.PT,
+    "paddingRight": 10 * CSS_UNIT.PT,
+    "paddingBottom": 10 * CSS_UNIT.PT,
+    "paddingLeft": 10 * CSS_UNIT.PT
+  },
+  "menuText": {
+    "fontSize": 20 * CSS_UNIT.PT,
+    "color": "#5f6bff"
+  },
+  "inlineBox": {
+    "marginTop": 10 * CSS_UNIT.PT,
+    "marginRight": 10 * CSS_UNIT.PT,
+    "marginBottom": 10 * CSS_UNIT.PT,
+    "marginLeft": 10 * CSS_UNIT.PT,
+    "verticalAlign": "center",
+    "float": "left"
+  },
+  "barText": {
+    "fontSize": 20 * CSS_UNIT.PT,
+    "color": "#fcffff"
+  },
+  "inputText": {
+    "backgroundColor": "#FAEBD7"
+  },
   "hintText": {
-    "marginTop": "10",
-    "marginRight": "10",
-    "marginBottom": "10",
-    "marginLeft": "10",
     "fontSize": 20 * CSS_UNIT.PT,
     "color": "#676569"
   }
 }
 
 /***/ }),
-/* 11 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+var _httpRequests = __webpack_require__(12);
+
+var _httpRequests2 = _interopRequireDefault(_httpRequests);
+
+var _testfunction = __webpack_require__(13);
+
+var _testfunction2 = _interopRequireDefault(_testfunction);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -186,7 +239,17 @@ Object.defineProperty(exports, "__esModule", {
 //
 
 var navigator = weex.requireModule('navigator');
-exports.default = {
+module.exports = {
+    data: function data() {
+        return {
+            txtInput: '',
+            txtChange: '',
+            txtReturnType: '',
+            txtSelection: '',
+            autofocus: false,
+            totalCount: 0
+        };
+    },
     methods: {
         jumpIn: function jumpIn(event) {
             var url = weex.config.bundleUrl; //获取当前路径
@@ -204,9 +267,149 @@ exports.default = {
             navigator.pop({
                 animated: 'true'
             });
+        },
+        search: function search(key) {
+            var count = _httpRequests2.default.methods.httpReq(key);
+            console.log('count:', count);
+        },
+
+        onchange: function onchange(event) {
+            //输入完毕回车或失去焦点时触发
+            this.txtChange = event.value;
+            console.log('onchange', event.value);
+        },
+        oninput: function oninput(event) {
+            //输入时触发
+            this.txtInput = event.value;
+            console.log('oninput', event.value);
         }
     }
 };
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["mainBody"]
+  }, [_c('div', {
+    staticClass: ["titleBar"]
+  }, [_c('text', {
+    staticClass: ["barText"],
+    on: {
+      "click": _vm.jumpOut
+    }
+  }, [_vm._v("back")])]), _c('div', {
+    staticClass: ["menuBody"]
+  }, [_c('div', {
+    staticClass: ["inlineBox"]
+  }, [_c('text', {
+    staticClass: ["menuText"]
+  }, [_vm._v(_vm._s(_vm.totalCount))])]), _c('div', {
+    staticClass: ["inlineBox"]
+  }, [_c('input', {
+    staticClass: ["inputText"],
+    attrs: {
+      "type": "text",
+      "placeholder": "Input Text",
+      "autofocus": true,
+      "value": ""
+    },
+    on: {
+      "change": _vm.onchange,
+      "input": _vm.oninput
+    }
+  })]), _c('div', {
+    staticClass: ["inlineBox"]
+  }, [_c('text', {
+    staticClass: ["menuText"],
+    on: {
+      "click": function($event) {
+        _vm.search(_vm.txtInput)
+      }
+    }
+  }, [_vm._v("Search")])])]), _c('div', {
+    staticStyle: {
+      backgroundColor: "#afddff",
+      width: "100%",
+      height: "1pt"
+    }
+  })])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+//http请求
+var stream = weex.requireModule('stream');
+exports.default = {
+    methods: {
+        //http请求
+        httpReq: function httpReq(key) {
+            var me = this;
+            //文字转码
+            var keyWord = encodeURI(key);
+            var url = "http://open.boosj.com/search/video/by_keywords?category=1362&keywords=" + keyWord + "&size=20&page=1";
+            console.log("request http for " + url);
+            stream.fetch({
+                method: 'GET',
+                url: url,
+                type: 'jsonp'
+            }, function (ret) {
+                if (!ret.ok) {
+                    me.getJsonpResult = "request failed";
+                    return 0;
+                } else {
+                    var _count = me.parseInfo(ret.data);
+                    console.log('_count:' + _count);
+                    return _count;
+                }
+            });
+        },
+        parseInfo: function parseInfo(_info) {
+            var me = this;
+            me.getJsonpResult = JSON.stringify(_info);
+            // console.log('get:'+me.getJsonpResult);
+            var obj = JSON.parse(me.getJsonpResult);
+            var objArray = obj.body.resources;
+            // console.log('item0:'+JSON.stringify(objArray[0]));
+            for (var i = 0; i < objArray.length; i++) {
+                // console.log('title:'+objArray[i].title);
+                console.log('title:' + objArray[i].id);
+            }
+            return objArray.length;
+        }
+    }
+};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = test;
+//test请求
+function test() {
+    console.log("test");
+}
 
 /***/ })
 /******/ ]);

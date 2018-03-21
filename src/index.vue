@@ -61,8 +61,8 @@
     horiz-align: center;
   }
   .logo {
-    width: 474px;
-    height: 632px;
+    width: 474wx;
+    height: 632wx;
   }
   .greeting {
     margin: 20px;

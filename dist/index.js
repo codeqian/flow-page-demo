@@ -133,8 +133,8 @@ module.exports = {
     "horizAlign": "center"
   },
   "logo": {
-    "width": "474",
-    "height": "632"
+    "width": "474wx",
+    "height": "632wx"
   },
   "greeting": {
     "marginTop": "20",

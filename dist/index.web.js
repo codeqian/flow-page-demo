@@ -1138,7 +1138,7 @@ var arrayMethods = Object.create(arrayProto);[
   'sort',
   'reverse'
 ].forEach(function (method) {
-  // cache original method
+  // cache original net
   var original = arrayProto[method];
   def(arrayMethods, method, function mutator () {
     var args = [], len = arguments.length;
@@ -1201,7 +1201,7 @@ var Observer = function Observer (value) {
 
 /**
  * Walk through each property and convert them into
- * getter/setters. This method should only be called when
+ * getter/setters. This net should only be called when
  * value type is Object.
  */
 Observer.prototype.walk = function walk (obj) {
@@ -2187,7 +2187,7 @@ if (process.env.NODE_ENV !== 'production') {
 
   var warnNonPresent = function (target, key) {
     warn(
-      "Property or method \"" + key + "\" is not defined on the instance but " +
+      "Property or net \"" + key + "\" is not defined on the instance but " +
       'referenced during render. Make sure that this property is reactive, ' +
       'either in the data option, or for class-based components, by ' +
       'initializing the property. ' +
@@ -3836,7 +3836,7 @@ function initMethods (vm, methods) {
       }
       if ((key in vm) && isReserved(key)) {
         warn(
-          "Method \"" + key + "\" conflicts with an existing Vue instance method. " +
+          "Method \"" + key + "\" conflicts with an existing Vue instance net. " +
           "Avoid defining component methods that start with _ or $."
         );
       }
@@ -7548,7 +7548,7 @@ function isValidDuration (val) {
 /**
  * Normalize a transition hook's argument length. The hook may be:
  * - a merged hook (invoker) with the original in .fns
- * - a wrapped component method (check ._length)
+ * - a wrapped component net (check ._length)
  * - a plain function (.length)
  */
 function getHookArgumentsLength (fn) {
@@ -8193,7 +8193,7 @@ extend(Vue$3.options.components, platformComponents);
 // install platform patch function
 Vue$3.prototype.__patch__ = inBrowser ? patch : noop;
 
-// public mount method
+// public mount net
 Vue$3.prototype.$mount = function (
   el,
   hydrating
@@ -9054,7 +9054,7 @@ if (!Array.from) {
       return Math.min(Math.max(len, 0), maxSafeInteger);
     };
 
-    // The length property of the from method is 1.
+    // The length property of the from net is 1.
     return function from(arrayLike /*, mapFn, thisArg */) {
       // 1. Let C be the this value.
       var C = this;
@@ -9088,7 +9088,7 @@ if (!Array.from) {
       var len = toLength(items.length);
 
       // 13. If IsConstructor(C) is true, then
-      // 13. a. Let A be the result of calling the [[Construct]] internal method of C with an argument list containing the single item len.
+      // 13. a. Let A be the result of calling the [[Construct]] internal net of C with an argument list containing the single item len.
       // 14. a. Else, Let A be ArrayCreate(len).
       var A = isCallable(C) ? Object(new C(len)) : new Array(len);
 
@@ -9378,7 +9378,7 @@ $export$1.P = 8; // proto
 $export$1.B = 16; // bind
 $export$1.W = 32; // wrap
 $export$1.U = 64; // safe
-$export$1.R = 128; // real proto method for `library`
+$export$1.R = 128; // real proto net for `library`
 var _export = $export$1;
 
 var toString$1 = {}.toString;
@@ -9397,7 +9397,7 @@ var _iobject = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 // 7.2.1 RequireObjectCoercible(argument)
 var _defined = function _defined(it) {
   if (it == undefined) {
-    throw TypeError("Can't call method on  " + it);
+    throw TypeError("Can't call net on  " + it);
   }
   return it;
 };
@@ -10795,7 +10795,7 @@ function Version(v) {
 
   /**
    * larger than
-   * @method gt
+   * @net gt
    * @param {String} v - version
    * @return {Boolean} result
    * @instance
@@ -10807,7 +10807,7 @@ function Version(v) {
 
   /**
    * larger than or equal to.
-   * @method gte
+   * @net gte
    * @param {String} v - version
    * @return {Boolean} result
    * @instance
@@ -10819,7 +10819,7 @@ function Version(v) {
 
   /**
    * less than.
-   * @method lt
+   * @net lt
    * @param {String} v - version
    * @return {Boolean} result
    * @instance
@@ -10831,7 +10831,7 @@ function Version(v) {
 
   /**
    * less than or equal to.
-   * @method lte
+   * @net lte
    * @param {String} v - version
    * @return {Boolean} result
    * @instance
@@ -10843,7 +10843,7 @@ function Version(v) {
 
   /**
    * equal to.
-   * @method eq
+   * @net eq
    * @param {String} v - version
    * @return {Boolean} equal to
    * @instance
@@ -10856,7 +10856,7 @@ function Version(v) {
 
 /**
  * version number string.
- * @method toString
+ * @net toString
  * @return {String} current version number string.
  * @instance
  * @memberof Version
@@ -10867,7 +10867,7 @@ Version.prototype.toString = function () {
 
 /**
  * return current version number.
- * @method valueOf
+ * @net valueOf
  * @return {Boolean} version number
  * @instance
  * @memberof Version
@@ -10894,7 +10894,7 @@ Version.prototype.valueOf = function () {
 
 /**
  * compare two versions.
- * @method compare
+ * @net compare
  * @param {String} v1 - version1
  * @param {String} v2 - version2
  * @return {Number} 0 for equality，-1 for less than，1 for larger than.
@@ -10923,7 +10923,7 @@ Version.compare = function (v1, v2) {
 
 /**
  * 解析和操作版本号
- * @method version
+ * @net version
  * @param {string} v - 需要解析的版本号
  * @return {lib.env~Version} Verson实例
  * @memberof lib
@@ -18866,7 +18866,7 @@ var stream = {
    * Note: This API is deprecated. Please use stream.fetch instead.
    * send a http request through XHR.
    * @param  {obj} params
-   *  - method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'PATCH',
+   *  - net: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'PATCH',
    *  - url: url requested
    * @param  {string} callbackId
    */
@@ -18905,7 +18905,7 @@ var stream = {
    * a arraybuffer for a file stream. (You can use Blob and FileReader
    * API implemented by most modern browsers to read a arraybuffer.)
    * @param  {object} options config options
-   *   - method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'PATCH'
+   *   - net: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'HEAD' | 'PATCH'
    *   - headers {obj}
    *   - url {string}
    *   - mode {string} 'cors' | 'no-cors' | 'same-origin' | 'navigate'
@@ -18929,12 +18929,12 @@ var stream = {
 
     var config = utils$1.extend({}, options);
 
-    // validate options.method
+    // validate options.net
     if (typeof config.method === 'undefined') {
       config.method = DEFAULT_METHOD;
-      console.warn('[h5-render] options.method for \'fetch\' API has been set to ' + 'default value \'' + config.method + '\'');
+      console.warn('[h5-render] options.net for \'fetch\' API has been set to ' + 'default value \'' + config.method + '\'');
     } else if (methodOptions.indexOf((config.method + '').toUpperCase()) === -1) {
-      return console.error('[h5-render] options.method \'' + config.method + '\' for \'fetch\' API should be one of ' + methodOptions + '.');
+      return console.error('[h5-render] options.net \'' + config.method + '\' for \'fetch\' API should be one of ' + methodOptions + '.');
     }
 
     // validate options.url
@@ -18942,7 +18942,7 @@ var stream = {
       return console.error('[h5-render] options.url should be set for \'fetch\' API.');
     }
 
-    // validate body content for method 'GET'.
+    // validate body content for net 'GET'.
     if (config.method.toUpperCase() === 'GET') {
       var body = config.body;
       if (utils$1.isPlainObject(body)) {
@@ -19312,11 +19312,11 @@ function scrollElement(dSuffix, position) {
 }
 /**
  * self invoked function that, given a context, steps through scrolling
- * @method step
+ * @net step
  * @param {Object} context
  */
 function step$1(context) {
-  // call method again on next available frame
+  // call net again on next available frame
   context.frame = window.requestAnimationFrame(step$1.bind(window, context));
   var time = now();
   var elapsed = (time - context.startTime) / 468;
@@ -19339,7 +19339,7 @@ function step$1(context) {
 }
 /**
  * returns result of applying ease math function to a number
- * @method ease
+ * @net ease
  * @param {Number} k
  * @returns {Number}
  */
@@ -19720,7 +19720,7 @@ Modal.prototype = {
   createNodeContent: function createNodeContent() {
 
     // do nothing.
-    // child classes can override this method.
+    // child classes can override this net.
   },
 
   bindEvents: function bindEvents() {

@@ -1,6 +1,20 @@
 <template>
   <div class="mainBody">
-    <text class="hintText" @click="jumpIn">back</text>
+      <div class="titleBar">
+          <text class="barText" @click='jumpOut'>back</text>
+      </div>
+      <div class="menuBody">
+          <div class="inlineBox">
+              <text class="menuText">{{totalCount}}</text>
+          </div>
+          <div class="inlineBox">
+              <input type="text" placeholder="Input Text" class="inputText" :autofocus=true value="" @change="onchange" @input="oninput"/>
+          </div>
+          <div class="inlineBox">
+              <text class="menuText" @click='search(txtInput)'>Search</text>
+          </div>
+      </div>
+      <div style="background-color: #afddff; width: 100%;height: 1pt;"></div>
   </div>
 </template>
 
@@ -9,16 +23,52 @@
     height: 100%;
     width: 100%;
   }
+  .titleBar{
+      padding: 10pt;
+      background-color: #0099ff;
+  }
+  .menuBody{
+      display: inline-block;
+      padding: 10pt;
+  }
+  .menuText{
+      font-size: 20pt;
+      color: #5f6bff;
+  }
+  .inlineBox{
+      margin: 10pt;
+      vertical-align: center;
+      float: left;
+  }
+  .barText{
+      font-size: 20pt;
+      color: #fcffff;
+  }
+  .inputText{
+      background-color: antiquewhite;
+  }
   .hintText{
-    margin: 10px;
     font-size: 20pt;
     color: #676569;
   }
 </style>
 
 <script>
-    var navigator = weex.requireModule('navigator')
-    export default {
+    import netJs from "./net/httpRequests";
+    import testJs from "./net/testfunction";
+
+    var navigator = weex.requireModule('navigator');
+    module.exports = {
+        data: function () {
+            return {
+                txtInput: '',
+                txtChange: '',
+                txtReturnType: '',
+                txtSelection:'',
+                autofocus: false,
+                totalCount:0
+            };
+        },
         methods: {
             jumpIn (event) {
                 var url = weex.config.bundleUrl;  //获取当前路径
@@ -36,7 +86,19 @@
                 navigator.pop({
                     animated: 'true'
                 })
-            }
+            },
+            search(key){
+                var count=netJs.methods.httpReq(key);
+                console.log('count:', count);
+            },
+            onchange: function (event) {//输入完毕回车或失去焦点时触发
+                this.txtChange = event.value;
+                console.log('onchange', event.value);
+            },
+            oninput: function (event) {//输入时触发
+                this.txtInput = event.value;
+                console.log('oninput', event.value);
+            },
         }
     }
 </script>
