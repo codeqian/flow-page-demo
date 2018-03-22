@@ -30,7 +30,6 @@ export default {
             // console.log('get:'+me.getJsonpResult);
             var obj =JSON.parse(me.getJsonpResult);
             var objArray =obj.body.resources;
-            // console.log('item0:'+JSON.stringify(objArray[0]));
             for(var i=0;i<objArray.length;i++){
                 // console.log('title:'+objArray[i].title);
                 console.log('title:'+objArray[i].id);

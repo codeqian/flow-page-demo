@@ -84,7 +84,7 @@ __vue_styles__.push(__webpack_require__(5)
 __vue_exports__ = __webpack_require__(6)
 
 /* template */
-var __vue_template__ = __webpack_require__(7)
+var __vue_template__ = __webpack_require__(9)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -172,13 +172,15 @@ module.exports = {
 "use strict";
 
 
-var _httpRequests = __webpack_require__(12);
+var _httpMethod = __webpack_require__(14);
 
-var _httpRequests2 = _interopRequireDefault(_httpRequests);
+var _httpMethod2 = _interopRequireDefault(_httpMethod);
 
-var _testfunction = __webpack_require__(13);
+var _httpFunction = __webpack_require__(15);
 
-var _testfunction2 = _interopRequireDefault(_testfunction);
+var testJs = _interopRequireWildcard(_httpFunction);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -250,6 +252,9 @@ module.exports = {
             totalCount: 0
         };
     },
+    created: function created() {
+        console.log("created");
+    },
     methods: {
         jumpIn: function jumpIn(event) {
             var url = weex.config.bundleUrl; //获取当前路径
@@ -269,8 +274,8 @@ module.exports = {
             });
         },
         search: function search(key) {
-            var count = _httpRequests2.default.methods.httpReq(key);
-            console.log('count:', count);
+            // netJs.methods.httpReq(key);
+            testJs.httpReq(key);
         },
 
         onchange: function onchange(event) {
@@ -287,7 +292,9 @@ module.exports = {
 };
 
 /***/ }),
-/* 7 */
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -306,7 +313,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["inlineBox"]
   }, [_c('text', {
     staticClass: ["menuText"]
-  }, [_vm._v(_vm._s(_vm.totalCount))])]), _c('div', {
+  }, [_vm._v("共" + _vm._s(_vm.totalCount) + "条")])]), _c('div', {
     staticClass: ["inlineBox"]
   }, [_c('input', {
     staticClass: ["inputText"],
@@ -340,11 +347,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 module.exports.render._withStripped = true
 
 /***/ }),
-/* 8 */,
-/* 9 */,
 /* 10 */,
 /* 11 */,
-/* 12 */
+/* 12 */,
+/* 13 */,
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -385,7 +392,6 @@ exports.default = {
             // console.log('get:'+me.getJsonpResult);
             var obj = JSON.parse(me.getJsonpResult);
             var objArray = obj.body.resources;
-            // console.log('item0:'+JSON.stringify(objArray[0]));
             for (var i = 0; i < objArray.length; i++) {
                 // console.log('title:'+objArray[i].title);
                 console.log('title:' + objArray[i].id);
@@ -396,7 +402,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 13 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -405,10 +411,46 @@ exports.default = {
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.default = test;
-//test请求
+exports.test = test;
+exports.httpReq = httpReq;
+exports.parseInfo = parseInfo;
+//http请求
 function test() {
     console.log("test");
+}
+function httpReq(key) {
+    console.log("totalCount text:" + this.totalCount);
+    //文字转码
+    var keyWord = encodeURI(key);
+    var url = "http://open.boosj.com/search/video/by_keywords?category=1362&keywords=" + keyWord + "&size=20&page=1";
+    console.log("request http for " + url);
+    var stream = weex.requireModule('stream');
+    stream.fetch({
+        method: 'GET',
+        url: url,
+        type: 'jsonp'
+    }, function (ret) {
+        if (!ret.ok) {
+            this.getJsonpResult = "request failed";
+            return 0;
+        } else {
+            var _count = parseInfo(ret.data);
+            console.log('count:' + _count);
+            return _count;
+        }
+    });
+}
+
+function parseInfo(_info) {
+    var getJsonpResult = JSON.stringify(_info);
+    // console.log('get:'+me.getJsonpResult);
+    var obj = JSON.parse(getJsonpResult);
+    var objArray = obj.body.resources;
+    for (var i = 0; i < objArray.length; i++) {
+        // console.log('title:'+objArray[i].title);
+        console.log('title:' + objArray[i].id);
+    }
+    return objArray.length;
 }
 
 /***/ })

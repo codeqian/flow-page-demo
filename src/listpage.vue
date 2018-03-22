@@ -5,7 +5,7 @@
       </div>
       <div class="menuBody">
           <div class="inlineBox">
-              <text class="menuText">{{totalCount}}</text>
+              <text class="menuText">共{{totalCount}}条</text>
           </div>
           <div class="inlineBox">
               <input type="text" placeholder="Input Text" class="inputText" :autofocus=true value="" @change="onchange" @input="oninput"/>
@@ -54,8 +54,8 @@
 </style>
 
 <script>
-    import netJs from "./net/httpRequests";
-    import testJs from "./net/testfunction";
+    import netJs from "./net/httpMethod";
+    import * as testJs from "./net/httpFunction";
 
     var navigator = weex.requireModule('navigator');
     module.exports = {
@@ -68,6 +68,9 @@
                 autofocus: false,
                 totalCount:0
             };
+        },
+        created: function() {
+            console.log("created");
         },
         methods: {
             jumpIn (event) {
@@ -88,8 +91,8 @@
                 })
             },
             search(key){
-                var count=netJs.methods.httpReq(key);
-                console.log('count:', count);
+                // netJs.methods.httpReq(key);
+                testJs.httpReq(key);
             },
             onchange: function (event) {//输入完毕回车或失去焦点时触发
                 this.txtChange = event.value;
