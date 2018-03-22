@@ -5,10 +5,10 @@
       </div>
       <div class="menuBody">
           <div class="inlineBox">
-              <text class="menuText">共{{totalCount}}条</text>
+              <text class="menuText">共 {{totalCount}} 条</text>
           </div>
           <div class="inlineBox">
-              <input type="text" placeholder="Input Text" class="inputText" :autofocus=true value="" @change="onchange" @input="oninput"/>
+              <input type="text" placeholder="Input Text" class="inputText" :autoFocus=true value="" @change="onchange" @input="oninput"/>
           </div>
           <div class="inlineBox">
               <text class="menuText" @click='search(txtInput)'>Search</text>
@@ -54,8 +54,12 @@
 </style>
 
 <script>
-    import netJs from "./net/httpMethod";
-    import * as testJs from "./net/httpFunction";
+    // import netJs from "./net/httpMethod";
+    // import mixJs from "./net/mixTest";
+    import * as httpJs from "./net/httpFunction";
+
+    //混入测试
+    // Vue.mixin(mixJs);
 
     var navigator = weex.requireModule('navigator');
     module.exports = {
@@ -65,12 +69,13 @@
                 txtChange: '',
                 txtReturnType: '',
                 txtSelection:'',
-                autofocus: false,
+                autoFocus: false,
                 totalCount:0
             };
         },
         created: function() {
-            console.log("created");
+            // this.mix_test();
+            console.log("created："+this.totalCount);
         },
         methods: {
             jumpIn (event) {
@@ -92,7 +97,7 @@
             },
             search(key){
                 // netJs.methods.httpReq(key);
-                testJs.httpReq(key);
+                httpJs.httpReq(key,this.httpCallback);
             },
             onchange: function (event) {//输入完毕回车或失去焦点时触发
                 this.txtChange = event.value;
@@ -102,6 +107,9 @@
                 this.txtInput = event.value;
                 console.log('oninput', event.value);
             },
+            httpCallback:function(val){
+                this.totalCount = val;
+            }
         }
     }
 </script>

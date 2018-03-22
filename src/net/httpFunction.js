@@ -2,8 +2,7 @@
 export function test(){
     console.log("test");
 }
-export function httpReq(key){
-    console.log("totalCount text:"+this.totalCount)
+export function httpReq(key,httpCallback){
     //文字转码
     var keyWord=encodeURI(key);
     var url="http://open.boosj.com/search/video/by_keywords?category=1362&keywords="+keyWord+"&size=20&page=1";
@@ -16,11 +15,11 @@ export function httpReq(key){
     }, function(ret) {
         if(!ret.ok){
             this.getJsonpResult = "request failed";
-            return 0;
+            httpCallback(0);
         }else{
             var _count=parseInfo(ret.data);
             console.log('count:'+_count);
-            return _count;
+            httpCallback(_count);
         }
     });
 }

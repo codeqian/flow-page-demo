@@ -65,12 +65,61 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */
+/******/ ({
+
+/***/ 15:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.test = test;
+exports.httpReq = httpReq;
+exports.parseInfo = parseInfo;
+//http请求
+function test() {
+    console.log("test");
+}
+function httpReq(key, httpCallback) {
+    //文字转码
+    var keyWord = encodeURI(key);
+    var url = "http://open.boosj.com/search/video/by_keywords?category=1362&keywords=" + keyWord + "&size=20&page=1";
+    console.log("request http for " + url);
+    var stream = weex.requireModule('stream');
+    stream.fetch({
+        method: 'GET',
+        url: url,
+        type: 'jsonp'
+    }, function (ret) {
+        if (!ret.ok) {
+            this.getJsonpResult = "request failed";
+            httpCallback(0);
+        } else {
+            var _count = parseInfo(ret.data);
+            console.log('count:' + _count);
+            httpCallback(_count);
+        }
+    });
+}
+
+function parseInfo(_info) {
+    var getJsonpResult = JSON.stringify(_info);
+    // console.log('get:'+me.getJsonpResult);
+    var obj = JSON.parse(getJsonpResult);
+    var objArray = obj.body.resources;
+    for (var i = 0; i < objArray.length; i++) {
+        // console.log('title:'+objArray[i].title);
+        console.log('title:' + objArray[i].id);
+    }
+    return objArray.length;
+}
+
+/***/ }),
+
+/***/ 4:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
@@ -118,7 +167,8 @@ new Vue(module.exports)
 
 
 /***/ }),
-/* 5 */
+
+/***/ 5:
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -166,25 +216,23 @@ module.exports = {
 }
 
 /***/ }),
-/* 6 */
+
+/***/ 6:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _httpMethod = __webpack_require__(14);
-
-var _httpMethod2 = _interopRequireDefault(_httpMethod);
-
 var _httpFunction = __webpack_require__(15);
 
-var testJs = _interopRequireWildcard(_httpFunction);
+var httpJs = _interopRequireWildcard(_httpFunction);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+//混入测试
+// Vue.mixin(mixJs);
 
-//
+var navigator = weex.requireModule('navigator'); //
 //
 //
 //
@@ -240,7 +288,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 
-var navigator = weex.requireModule('navigator');
+// import netJs from "./net/httpMethod";
+// import mixJs from "./net/mixTest";
+
 module.exports = {
     data: function data() {
         return {
@@ -248,12 +298,13 @@ module.exports = {
             txtChange: '',
             txtReturnType: '',
             txtSelection: '',
-            autofocus: false,
+            autoFocus: false,
             totalCount: 0
         };
     },
     created: function created() {
-        console.log("created");
+        // this.mix_test();
+        console.log("created：" + this.totalCount);
     },
     methods: {
         jumpIn: function jumpIn(event) {
@@ -275,7 +326,7 @@ module.exports = {
         },
         search: function search(key) {
             // netJs.methods.httpReq(key);
-            testJs.httpReq(key);
+            httpJs.httpReq(key, this.httpCallback);
         },
 
         onchange: function onchange(event) {
@@ -287,14 +338,16 @@ module.exports = {
             //输入时触发
             this.txtInput = event.value;
             console.log('oninput', event.value);
+        },
+        httpCallback: function httpCallback(val) {
+            this.totalCount = val;
         }
     }
 };
 
 /***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */
+
+/***/ 9:
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -313,14 +366,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: ["inlineBox"]
   }, [_c('text', {
     staticClass: ["menuText"]
-  }, [_vm._v("共" + _vm._s(_vm.totalCount) + "条")])]), _c('div', {
+  }, [_vm._v("共 " + _vm._s(_vm.totalCount) + " 条")])]), _c('div', {
     staticClass: ["inlineBox"]
   }, [_c('input', {
     staticClass: ["inputText"],
     attrs: {
       "type": "text",
       "placeholder": "Input Text",
-      "autofocus": true,
+      "autoFocus": true,
       "value": ""
     },
     on: {
@@ -346,112 +399,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
-/***/ }),
-/* 10 */,
-/* 11 */,
-/* 12 */,
-/* 13 */,
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-//http请求
-var stream = weex.requireModule('stream');
-exports.default = {
-    methods: {
-        //http请求
-        httpReq: function httpReq(key) {
-            var me = this;
-            //文字转码
-            var keyWord = encodeURI(key);
-            var url = "http://open.boosj.com/search/video/by_keywords?category=1362&keywords=" + keyWord + "&size=20&page=1";
-            console.log("request http for " + url);
-            stream.fetch({
-                method: 'GET',
-                url: url,
-                type: 'jsonp'
-            }, function (ret) {
-                if (!ret.ok) {
-                    me.getJsonpResult = "request failed";
-                    return 0;
-                } else {
-                    var _count = me.parseInfo(ret.data);
-                    console.log('_count:' + _count);
-                    return _count;
-                }
-            });
-        },
-        parseInfo: function parseInfo(_info) {
-            var me = this;
-            me.getJsonpResult = JSON.stringify(_info);
-            // console.log('get:'+me.getJsonpResult);
-            var obj = JSON.parse(me.getJsonpResult);
-            var objArray = obj.body.resources;
-            for (var i = 0; i < objArray.length; i++) {
-                // console.log('title:'+objArray[i].title);
-                console.log('title:' + objArray[i].id);
-            }
-            return objArray.length;
-        }
-    }
-};
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.test = test;
-exports.httpReq = httpReq;
-exports.parseInfo = parseInfo;
-//http请求
-function test() {
-    console.log("test");
-}
-function httpReq(key) {
-    console.log("totalCount text:" + this.totalCount);
-    //文字转码
-    var keyWord = encodeURI(key);
-    var url = "http://open.boosj.com/search/video/by_keywords?category=1362&keywords=" + keyWord + "&size=20&page=1";
-    console.log("request http for " + url);
-    var stream = weex.requireModule('stream');
-    stream.fetch({
-        method: 'GET',
-        url: url,
-        type: 'jsonp'
-    }, function (ret) {
-        if (!ret.ok) {
-            this.getJsonpResult = "request failed";
-            return 0;
-        } else {
-            var _count = parseInfo(ret.data);
-            console.log('count:' + _count);
-            return _count;
-        }
-    });
-}
-
-function parseInfo(_info) {
-    var getJsonpResult = JSON.stringify(_info);
-    // console.log('get:'+me.getJsonpResult);
-    var obj = JSON.parse(getJsonpResult);
-    var objArray = obj.body.resources;
-    for (var i = 0; i < objArray.length; i++) {
-        // console.log('title:'+objArray[i].title);
-        console.log('title:' + objArray[i].id);
-    }
-    return objArray.length;
-}
-
 /***/ })
-/******/ ]);
+
+/******/ });
