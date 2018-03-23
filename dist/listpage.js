@@ -344,6 +344,9 @@ module.exports = {
         httpCallback: function httpCallback(val) {
             //获得HTTP请求数据后的回调
             this.boxes = val;
+        },
+        onClick: function onClick(_index) {
+            console.log("index:" + _index);
         }
     }
 };
@@ -364,7 +367,7 @@ exports.parseInfo = parseInfo;
 function httpReq(key, httpCallback) {
     //文字转码
     var keyWord = encodeURI(key);
-    var url = "http:xxx";
+    var url = "http://xxx";
     console.log("request http for " + url);
     var stream = weex.requireModule('stream');
     stream.fetch({

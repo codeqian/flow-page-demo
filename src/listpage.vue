@@ -17,7 +17,7 @@
       <div style="background-color: #afddff; width: 100%;height: 1pt;"></div>
       <list class="videoList">
           <!--boxs是数据中的列表，对应script中data属性里的数据名称。item是元素的名字，随便取，后面绑定数据的时候用到。v-for是循环语句-->
-          <cell class="cell" v-for="item in boxes">
+          <cell class="cell" v-for="(item,index) in boxes" @click="onClick(index)">
               <div class="inlineBox">
                   <image class="imageBox" :src="item.imageUrl" />
               </div>
@@ -142,6 +142,9 @@
             },
             httpCallback:function(val){//获得HTTP请求数据后的回调
                 this.boxes=val;
+            },
+            onClick(_index){
+                console.log("index:"+_index);
             }
         }
     }

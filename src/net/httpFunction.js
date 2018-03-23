@@ -2,7 +2,7 @@
 export function httpReq(key,httpCallback){
     //文字转码
     var keyWord=encodeURI(key);
-    var url="http:xxx";
+    var url="http://xxx";
     console.log("request http for "+url);
     var stream = weex.requireModule('stream');
     stream.fetch({
