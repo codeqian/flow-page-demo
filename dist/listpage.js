@@ -65,61 +65,12 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 15:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.test = test;
-exports.httpReq = httpReq;
-exports.parseInfo = parseInfo;
-//http请求
-function test() {
-    console.log("test");
-}
-function httpReq(key, httpCallback) {
-    //文字转码
-    var keyWord = encodeURI(key);
-    var url = "http://open.boosj.com/search/video/by_keywords?category=1362&keywords=" + keyWord + "&size=20&page=1";
-    console.log("request http for " + url);
-    var stream = weex.requireModule('stream');
-    stream.fetch({
-        method: 'GET',
-        url: url,
-        type: 'jsonp'
-    }, function (ret) {
-        if (!ret.ok) {
-            this.getJsonpResult = "request failed";
-            httpCallback(0);
-        } else {
-            var _count = parseInfo(ret.data);
-            console.log('count:' + _count);
-            httpCallback(_count);
-        }
-    });
-}
-
-function parseInfo(_info) {
-    var getJsonpResult = JSON.stringify(_info);
-    // console.log('get:'+me.getJsonpResult);
-    var obj = JSON.parse(getJsonpResult);
-    var objArray = obj.body.resources;
-    for (var i = 0; i < objArray.length; i++) {
-        // console.log('title:'+objArray[i].title);
-        console.log('title:' + objArray[i].id);
-    }
-    return objArray.length;
-}
-
-/***/ }),
-
-/***/ 4:
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
@@ -133,7 +84,7 @@ __vue_styles__.push(__webpack_require__(5)
 __vue_exports__ = __webpack_require__(6)
 
 /* template */
-var __vue_template__ = __webpack_require__(9)
+var __vue_template__ = __webpack_require__(8)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -167,8 +118,7 @@ new Vue(module.exports)
 
 
 /***/ }),
-
-/***/ 5:
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = {
@@ -182,6 +132,22 @@ module.exports = {
     "paddingBottom": 10 * CSS_UNIT.PT,
     "paddingLeft": 10 * CSS_UNIT.PT,
     "backgroundColor": "#0099ff"
+  },
+  "videoList": {
+    "marginTop": 10 * CSS_UNIT.PT,
+    "marginRight": 10 * CSS_UNIT.PT,
+    "marginBottom": 10 * CSS_UNIT.PT,
+    "marginLeft": 10 * CSS_UNIT.PT
+  },
+  "cell": {
+    "display": "inline-block"
+  },
+  "cellText": {
+    "width": 60
+  },
+  "imageBox": {
+    "width": 150 * CSS_UNIT.PT,
+    "height": 150 * CSS_UNIT.PT
   },
   "menuBody": {
     "display": "inline-block",
@@ -209,6 +175,10 @@ module.exports = {
   "inputText": {
     "backgroundColor": "#FAEBD7"
   },
+  "contentText": {
+    "fontSize": 20 * CSS_UNIT.PT,
+    "color": "#3d3f66"
+  },
   "hintText": {
     "fontSize": 20 * CSS_UNIT.PT,
     "color": "#676569"
@@ -216,14 +186,13 @@ module.exports = {
 }
 
 /***/ }),
-
-/***/ 6:
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _httpFunction = __webpack_require__(15);
+var _httpFunction = __webpack_require__(7);
 
 var httpJs = _interopRequireWildcard(_httpFunction);
 
@@ -287,6 +256,36 @@ var navigator = weex.requireModule('navigator'); //
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 // import netJs from "./net/httpMethod";
 // import mixJs from "./net/mixTest";
@@ -294,17 +293,19 @@ var navigator = weex.requireModule('navigator'); //
 module.exports = {
     data: function data() {
         return {
+            logo: 'http://img2.ph.126.net/12MZEnxM2E35rMPvTCrYRg==/6632712635095805282.jpg',
             txtInput: '',
             txtChange: '',
             txtReturnType: '',
             txtSelection: '',
             autoFocus: false,
-            totalCount: 0
+            totalCount: 0,
+            boxes: []
         };
     },
     created: function created() {
         // this.mix_test();
-        console.log("created：" + this.totalCount);
+        console.log("created!");
     },
     methods: {
         jumpIn: function jumpIn(event) {
@@ -333,6 +334,7 @@ module.exports = {
             //输入完毕回车或失去焦点时触发
             this.txtChange = event.value;
             console.log('onchange', event.value);
+            this.search(this.txtInput);
         },
         oninput: function oninput(event) {
             //输入时触发
@@ -340,65 +342,63 @@ module.exports = {
             console.log('oninput', event.value);
         },
         httpCallback: function httpCallback(val) {
-            this.totalCount = val;
+            //获得HTTP请求数据后的回调
+            this.boxes = val;
         }
     }
 };
 
 /***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
 
-/***/ 9:
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.httpReq = httpReq;
+exports.parseInfo = parseInfo;
+//http请求
+function httpReq(key, httpCallback) {
+    //文字转码
+    var keyWord = encodeURI(key);
+    var url = "http:xxx";
+    console.log("request http for " + url);
+    var stream = weex.requireModule('stream');
+    stream.fetch({
+        method: 'GET',
+        url: url,
+        type: 'jsonp'
+    }, function (ret) {
+        if (!ret.ok) {
+            this.getJsonpResult = "request failed";
+            httpCallback(0);
+        } else {
+            var _objArray = parseInfo(ret.data);
+            httpCallback(_objArray);
+        }
+    });
+}
+
+function parseInfo(_info) {
+    var getJsonpResult = JSON.stringify(_info);
+    // console.log('get:'+me.getJsonpResult);
+    var obj = JSON.parse(getJsonpResult);
+    var objArray = obj.body.resources;
+    for (var i = 0; i < objArray.length; i++) {
+        // console.log('title:'+objArray[i].title);
+        console.log('title:' + objArray[i].id);
+    }
+    return objArray;
+}
+
+/***/ }),
+/* 8 */
 /***/ (function(module, exports) {
 
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["mainBody"]
-  }, [_c('div', {
-    staticClass: ["titleBar"]
-  }, [_c('text', {
-    staticClass: ["barText"],
-    on: {
-      "click": _vm.jumpOut
-    }
-  }, [_vm._v("back")])]), _c('div', {
-    staticClass: ["menuBody"]
-  }, [_c('div', {
-    staticClass: ["inlineBox"]
-  }, [_c('text', {
-    staticClass: ["menuText"]
-  }, [_vm._v("共 " + _vm._s(_vm.totalCount) + " 条")])]), _c('div', {
-    staticClass: ["inlineBox"]
-  }, [_c('input', {
-    staticClass: ["inputText"],
-    attrs: {
-      "type": "text",
-      "placeholder": "Input Text",
-      "autoFocus": true,
-      "value": ""
-    },
-    on: {
-      "change": _vm.onchange,
-      "input": _vm.oninput
-    }
-  })]), _c('div', {
-    staticClass: ["inlineBox"]
-  }, [_c('text', {
-    staticClass: ["menuText"],
-    on: {
-      "click": function($event) {
-        _vm.search(_vm.txtInput)
-      }
-    }
-  }, [_vm._v("Search")])])]), _c('div', {
-    staticStyle: {
-      backgroundColor: "#afddff",
-      width: "100%",
-      height: "1pt"
-    }
-  })])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
+module.exports={render:function(){},staticRenderFns:[]}
 
 /***/ })
-
-/******/ });
+/******/ ]);

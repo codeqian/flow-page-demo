@@ -1,9 +1,7 @@
-<script src="../dist/index.web.js"></script>
-<script src="../../../demo/weex-hackernews-master/weex-hackernews-master/src/entry.js"></script>
 <template>
   <div class="mainBody">
     <div class="wrapper">
-      <image :src="logo" class="logo"></image>
+      <image :src="logo" class="logoImage"></image>
       <text class="greeting">A list page build by weex.</text><br/>
       <text class="buttonText" @click="jumpIn">Enter</text><br/>
     </div>
@@ -60,7 +58,7 @@
     vert-align:bottom ;
     horiz-align: center;
   }
-  .logo {
+  .logoImage {
     width: 474wx;
     height: 632wx;
   }
@@ -81,10 +79,5 @@
   .hintText{
     font-size: 20pt;
     color: #676569;
-  }
-  .message {
-    margin: 30px;
-    font-size: 32px;
-    color: #727272;
   }
 </style>

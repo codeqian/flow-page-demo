@@ -122,14 +122,39 @@ module.exports = {
     "justifyContent": "center",
     "alignItems": "center"
   },
+  "mainBody": {
+    "justifyContent": "center",
+    "alignItems": "center",
+    "height": 100,
+    "width": 100
+  },
+  "foot": {
+    "vertAlign": "bottom",
+    "horizAlign": "center"
+  },
   "logo": {
-    "width": "424",
-    "height": "200"
+    "width": "474wx",
+    "height": "632wx"
   },
   "greeting": {
-    "marginTop": "70",
+    "marginTop": "20",
+    "marginRight": "20",
+    "marginBottom": "20",
+    "marginLeft": "20",
     "fontSize": "50",
     "color": "#41B883"
+  },
+  "buttonText": {
+    "marginTop": "10",
+    "marginRight": "10",
+    "marginBottom": "10",
+    "marginLeft": "10",
+    "fontSize": "80",
+    "color": "#5f6bff"
+  },
+  "hintText": {
+    "fontSize": 20 * CSS_UNIT.PT,
+    "color": "#676569"
   },
   "message": {
     "marginTop": "30",
@@ -159,12 +184,42 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+
+var navigator = weex.requireModule('navigator');
+var modal = weex.requireModule('modal');
 
 exports.default = {
   data: function data() {
     return {
-      logo: 'https://gw.alicdn.com/tfs/TB1yopEdgoQMeJjy1XaXXcSsFXa-640-302.png'
+      logo: 'http://img2.ph.126.net/12MZEnxM2E35rMPvTCrYRg==/6632712635095805282.jpg'
     };
+  },
+
+  methods: {
+    jumpIn: function jumpIn(event) {
+      var url = weex.config.bundleUrl; //获取当前路径
+      console.log(url);
+      url = url.split('/').slice(0, -1).join('/') + '/listpage.html'; //拼接当前路径到要跳转的文件
+      console.log(url);
+      navigator.push({
+        url: url,
+        animated: 'true'
+      }, function (event) {
+        // 完成后执行的操作
+      });
+    },
+    jumpOut: function jumpOut() {
+      navigator.pop({
+        animated: 'true'
+      });
+    }
   }
 };
 
@@ -174,6 +229,8 @@ exports.default = {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
+    staticClass: ["mainBody"]
+  }, [_c('div', {
     staticClass: ["wrapper"]
   }, [_c('image', {
     staticClass: ["logo"],
@@ -182,10 +239,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }), _c('text', {
     staticClass: ["greeting"]
-  }, [_vm._v("The environment is ready!")]), _c('text', {
-    staticClass: ["message"]
-  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")])])
-},staticRenderFns: []}
+  }, [_vm._v("A list page build by weex.")]), _c('br'), _c('text', {
+    staticClass: ["buttonText"],
+    on: {
+      "click": _vm.jumpIn
+    }
+  }, [_vm._v("Enter")]), _c('br')], 1), _vm._m(0)])
+},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["foot"]
+  }, [_c('text', {
+    staticClass: ["hintText"]
+  }, [_vm._v("DEMO")])])
+}]}
 module.exports.render._withStripped = true
 
 /***/ })

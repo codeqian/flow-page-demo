@@ -1,11 +1,8 @@
 //http请求
-export function test(){
-    console.log("test");
-}
 export function httpReq(key,httpCallback){
     //文字转码
     var keyWord=encodeURI(key);
-    var url="http://open.boosj.com/search/video/by_keywords?category=1362&keywords="+keyWord+"&size=20&page=1";
+    var url="http:xxx";
     console.log("request http for "+url);
     var stream = weex.requireModule('stream');
     stream.fetch({
@@ -17,9 +14,8 @@ export function httpReq(key,httpCallback){
             this.getJsonpResult = "request failed";
             httpCallback(0);
         }else{
-            var _count=parseInfo(ret.data);
-            console.log('count:'+_count);
-            httpCallback(_count);
+            var _objArray=parseInfo(ret.data);
+            httpCallback(_objArray);
         }
     });
 }
@@ -33,5 +29,5 @@ export function parseInfo(_info){
         // console.log('title:'+objArray[i].title);
         console.log('title:'+objArray[i].id);
     }
-    return objArray.length;
+    return objArray;
 }

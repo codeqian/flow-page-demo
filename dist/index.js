@@ -132,7 +132,7 @@ module.exports = {
     "vertAlign": "bottom",
     "horizAlign": "center"
   },
-  "logo": {
+  "logoImage": {
     "width": "474wx",
     "height": "632wx"
   },
@@ -155,14 +155,6 @@ module.exports = {
   "hintText": {
     "fontSize": 20 * CSS_UNIT.PT,
     "color": "#676569"
-  },
-  "message": {
-    "marginTop": "30",
-    "marginRight": "30",
-    "marginBottom": "30",
-    "marginLeft": "30",
-    "fontSize": "32",
-    "color": "#727272"
   }
 }
 
@@ -176,8 +168,6 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
 //
 //
 //
@@ -233,7 +223,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: ["wrapper"]
   }, [_c('image', {
-    staticClass: ["logo"],
+    staticClass: ["logoImage"],
     attrs: {
       "src": _vm.logo
     }

@@ -15,6 +15,19 @@
           </div>
       </div>
       <div style="background-color: #afddff; width: 100%;height: 1pt;"></div>
+      <list class="videoList">
+          <!--boxs是数据中的列表，对应script中data属性里的数据名称。item是元素的名字，随便取，后面绑定数据的时候用到。v-for是循环语句-->
+          <cell class="cell" v-for="item in boxes">
+              <div class="inlineBox">
+                  <image class="imageBox" :src="item.imageUrl" />
+              </div>
+              <div class="inlineBox, cellText">
+                  <text class="hintText">{{item.title}}</text><br>
+                  <!--<text class="contentText" lines="2">{{item.description}}</text>-->
+                  <text class="hintText">播放：{{item.click}}</text>
+              </div>
+          </cell>
+      </list>
   </div>
 </template>
 
@@ -26,6 +39,19 @@
   .titleBar{
       padding: 10pt;
       background-color: #0099ff;
+  }
+  .videoList{
+      margin: 10pt;
+  }
+  .cell{
+      display: inline-block;
+  }
+  .cellText{
+      width: 60%;
+  }
+  .imageBox{
+      width: 150pt;
+      height: 150pt;
   }
   .menuBody{
       display: inline-block;
@@ -47,6 +73,10 @@
   .inputText{
       background-color: antiquewhite;
   }
+  .contentText{
+      font-size: 20pt;
+      color: #3d3f66;
+  }
   .hintText{
     font-size: 20pt;
     color: #676569;
@@ -65,17 +95,19 @@
     module.exports = {
         data: function () {
             return {
+                logo: 'http://img2.ph.126.net/12MZEnxM2E35rMPvTCrYRg==/6632712635095805282.jpg',
                 txtInput: '',
                 txtChange: '',
                 txtReturnType: '',
                 txtSelection:'',
                 autoFocus: false,
-                totalCount:0
+                totalCount:0,
+                boxes: []
             };
         },
         created: function() {
             // this.mix_test();
-            console.log("created："+this.totalCount);
+            console.log("created!");
         },
         methods: {
             jumpIn (event) {
@@ -102,13 +134,14 @@
             onchange: function (event) {//输入完毕回车或失去焦点时触发
                 this.txtChange = event.value;
                 console.log('onchange', event.value);
+                this.search(this.txtInput);
             },
             oninput: function (event) {//输入时触发
                 this.txtInput = event.value;
                 console.log('oninput', event.value);
             },
-            httpCallback:function(val){
-                this.totalCount = val;
+            httpCallback:function(val){//获得HTTP请求数据后的回调
+                this.boxes=val;
             }
         }
     }
