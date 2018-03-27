@@ -17,7 +17,7 @@
       <div style="background-color: #afddff; width: 100%;height: 1pt;"></div>
       <list class="videoList">
           <!--boxs是数据中的列表，对应script中data属性里的数据名称。item是元素的名字，随便取，后面绑定数据的时候用到。v-for是循环语句-->
-          <cell class="cell" v-for="(item,index) in boxes" @click="onClick(index)">
+          <cell class="cell" v-for="(item,index) in boxes" @click="jumpIn(index)">
               <div class="inlineBox">
                   <image class="imageBox" :src="item.imageUrl" />
               </div>
@@ -91,7 +91,8 @@
     //混入测试
     // Vue.mixin(mixJs);
 
-    var navigator = weex.requireModule('navigator');
+    const storage = weex.requireModule('storage');
+    const navigator = weex.requireModule('navigator');
     module.exports = {
         data: function () {
             return {
@@ -110,16 +111,20 @@
             console.log("created!");
         },
         methods: {
-            jumpIn (event) {
+            jumpIn (_index) {
+                console.log("index:"+_index);
                 var url = weex.config.bundleUrl;  //获取当前路径
                 console.log(url);
-                url = url.split('/').slice(0,-1).join('/') + '/index.html';//拼接当前路径到要跳转的文件
+                url = url.split('/').slice(0,-1).join('/') + '/player.html';//拼接当前路径到要跳转的文件
                 console.log(url);
                 navigator.push({
                     url: url,
                     animated: 'true'
                 }, event => {
                     // 完成后执行的操作
+                });
+                storage.setItem('vid', this.boxes[_index].id, event => {
+                    console.log('set success:'+this.boxes[_index].id)
                 })
             },
             jumpOut () {
@@ -143,9 +148,6 @@
             httpCallback:function(val){//获得HTTP请求数据后的回调
                 this.boxes=val;
             },
-            onClick(_index){
-                console.log("index:"+_index);
-            }
         }
     }
 </script>

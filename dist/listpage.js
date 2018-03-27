@@ -201,7 +201,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //混入测试
 // Vue.mixin(mixJs);
 
-var navigator = weex.requireModule('navigator'); //
+var storage = weex.requireModule('storage'); //
 //
 //
 //
@@ -290,6 +290,7 @@ var navigator = weex.requireModule('navigator'); //
 // import netJs from "./net/httpMethod";
 // import mixJs from "./net/mixTest";
 
+var navigator = weex.requireModule('navigator');
 module.exports = {
     data: function data() {
         return {
@@ -308,16 +309,22 @@ module.exports = {
         console.log("created!");
     },
     methods: {
-        jumpIn: function jumpIn(event) {
+        jumpIn: function jumpIn(_index) {
+            var _this = this;
+
+            console.log("index:" + _index);
             var url = weex.config.bundleUrl; //获取当前路径
             console.log(url);
-            url = url.split('/').slice(0, -1).join('/') + '/index.html'; //拼接当前路径到要跳转的文件
+            url = url.split('/').slice(0, -1).join('/') + '/player.html'; //拼接当前路径到要跳转的文件
             console.log(url);
             navigator.push({
                 url: url,
                 animated: 'true'
             }, function (event) {
                 // 完成后执行的操作
+            });
+            storage.setItem('vid', this.boxes[_index].id, function (event) {
+                console.log('set success:' + _this.boxes[_index].id);
             });
         },
         jumpOut: function jumpOut() {
@@ -344,9 +351,6 @@ module.exports = {
         httpCallback: function httpCallback(val) {
             //获得HTTP请求数据后的回调
             this.boxes = val;
-        },
-        onClick: function onClick(_index) {
-            console.log("index:" + _index);
         }
     }
 };

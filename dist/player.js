@@ -62,26 +62,34 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 17:
+/******/ ([
+/* 0 */,
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(18)
+__vue_styles__.push(__webpack_require__(10)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(19)
+__vue_exports__ = __webpack_require__(11)
 
 /* template */
-var __vue_template__ = __webpack_require__(20)
+var __vue_template__ = __webpack_require__(12)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -93,10 +101,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "F:\\Git\\flow-page-demo\\src\\views\\videoPreview.vue"
+__vue_options__.__file = "F:\\Git\\flow-page-demo\\src\\player.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-5528536e"
+__vue_options__._scopeId = "data-v-14bc19af"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -115,29 +123,40 @@ new Vue(module.exports)
 
 
 /***/ }),
-
-/***/ 18:
+/* 10 */
 /***/ (function(module, exports) {
 
 module.exports = {
-  "inlineBox": {
-    "marginTop": 10 * CSS_UNIT.PT,
-    "marginRight": 10 * CSS_UNIT.PT,
-    "marginBottom": 10 * CSS_UNIT.PT,
-    "marginLeft": 10 * CSS_UNIT.PT,
-    "verticalAlign": "center",
-    "float": "left"
+  "mainBody": {
+    "height": 100,
+    "width": 100
+  },
+  "titleBar": {
+    "paddingTop": 10 * CSS_UNIT.PT,
+    "paddingRight": 10 * CSS_UNIT.PT,
+    "paddingBottom": 10 * CSS_UNIT.PT,
+    "paddingLeft": 10 * CSS_UNIT.PT,
+    "backgroundColor": "#0099ff"
+  },
+  "barText": {
+    "fontSize": 20 * CSS_UNIT.PT,
+    "color": "#fcffff"
+  },
+  "videoPlayer": {
+    "width": 100
   }
 }
 
 /***/ }),
-
-/***/ 19:
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 //
 //
 //
@@ -151,39 +170,81 @@ module.exports = {
 //
 //
 
-module.exports = {
-    name: "video-preview",
+var navigator = weex.requireModule('navigator');
+var storage = weex.requireModule('storage');
+
+exports.default = {
+    name: "player",
     data: function data() {
         return {
-            _title: '',
-            _src: ''
+            vid: '',
+            state: '----',
+            title: "test video",
+            videoSrc: "http://www.w3school.com.cn/example/html5/mov_bbb.mp4"
         };
     },
+    created: function created() {
+        var _this = this;
+
+        // this.mix_test();
+        storage.getItem('vid', function (event) {
+            console.log('get value:', event.data);
+            _this.vid = event.data;
+            _this.title = "id:" + _this.vid;
+        });
+    },
     methods: {
-        setInfo: function setInfo() {
-            //
+        jumpOut: function jumpOut() {
+            navigator.pop({
+                animated: 'true'
+            });
+        },
+        onstart: function onstart(event) {
+            this.state = 'onstart';
+        },
+        onpause: function onpause(event) {
+            this.state = 'onpause';
+        },
+        onfinish: function onfinish(event) {
+            this.state = 'onfinish';
+        },
+        onfail: function onfail(event) {
+            this.state = 'onfinish';
         }
     }
 };
 
 /***/ }),
-
-/***/ 20:
+/* 12 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('div', {
-    staticClass: ["inlineBox"]
-  }, [_c('image', {
-    attrs: {
-      "src": _vm._src
+  return _c('div', {
+    staticClass: ["mainBody"]
+  }, [_c('div', {
+    staticClass: ["titleBar"]
+  }, [_c('text', {
+    staticClass: ["barText"],
+    on: {
+      "click": _vm.jumpOut
     }
-  })]), _c('div', {
-    staticClass: ["inlineBox"]
-  }, [_c('text', [_vm._v(_vm._s(_vm._title))])])])
+  }, [_vm._v("back")])]), _c('video', {
+    staticClass: ["videoPlayer"],
+    attrs: {
+      "id": "Player",
+      "src": _vm.videoSrc,
+      "autoPlay": "true",
+      "controls": ""
+    },
+    on: {
+      "start": _vm.onstart,
+      "pause": _vm.onpause,
+      "finish": _vm.onfinish,
+      "fail": _vm.onfail
+    }
+  }), _c('text', [_vm._v("标题：" + _vm._s(_vm.title))]), _c('text', [_vm._v("当前状态：" + _vm._s(_vm.state))])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
 /***/ })
-
-/******/ });
+/******/ ]);
