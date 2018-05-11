@@ -22,7 +22,7 @@
                   <image class="imageBox" :src="item.imageUrl" />
               </div>
               <div class="inlineBox, cellText">
-                  <text class="hintText">{{item.title}}</text><br>
+                  <text class="hintText">{{item.title}}</text><br />
                   <!--<text class="contentText" lines="2">{{item.description}}</text>-->
                   <text class="hintText">播放：{{item.click}}</text>
               </div>

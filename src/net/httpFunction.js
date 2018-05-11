@@ -2,7 +2,7 @@
 export function httpReq(key,httpCallback){
     //文字转码
     var keyWord=encodeURI(key);
-    var url="http://xxx";
+    var url="http://open.boosj.com/search/video/by_keywords?category=1362&keywords="+keyWord+"&size=20&page=1";
     console.log("request http for "+url);
     var stream = weex.requireModule('stream');
     stream.fetch({

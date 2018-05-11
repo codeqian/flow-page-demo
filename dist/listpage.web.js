@@ -20840,7 +20840,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\n.mainBody{\n  height: 100%;\n  width: 100%;\n}\n.titleBar{\n    padding: 10pt;\n    background-color: #0099ff;\n}\n.menuBody{\n    display: inline-block;\n    padding: 10pt;\n}\n.menuText{\n    font-size: 20pt;\n    color: #5f6bff;\n}\n.inlineBox{\n    margin: 10pt;\n    vertical-align: center;\n    float: left;\n}\n.barText{\n    font-size: 20pt;\n    color: #fcffff;\n}\n.inputText{\n    background-color: antiquewhite;\n}\n.hintText{\n  font-size: 20pt;\n  color: #676569;\n}\n", ""]);
+exports.push([module.i, "\n.mainBody{\n  height: 100%;\n  width: 100%;\n}\n.titleBar{\n    padding: 10pt;\n    background-color: #0099ff;\n}\n.videoList{\n    margin: 10pt;\n}\n.cell{\n    display: inline-block;\n}\n.cellText{\n    width: 60%;\n}\n.imageBox{\n    width: 150pt;\n    height: 150pt;\n}\n.menuBody{\n    display: inline-block;\n    padding: 10pt;\n}\n.menuText{\n    font-size: 20pt;\n    color: #5f6bff;\n}\n.inlineBox{\n    margin: 10pt;\n    vertical-align: center;\n    float: left;\n}\n.barText{\n    font-size: 20pt;\n    color: #fcffff;\n}\n.inputText{\n    background-color: antiquewhite;\n}\n.contentText{\n    font-size: 20pt;\n    color: #3d3f66;\n}\n.hintText{\n  font-size: 20pt;\n  color: #676569;\n}\n", ""]);
 
 // exports
 
@@ -20861,7 +20861,37 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 //混入测试
 // Vue.mixin(mixJs);
 
-var navigator = weex.requireModule('navigator'); //
+var storage = weex.requireModule('storage'); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -20920,32 +20950,41 @@ var navigator = weex.requireModule('navigator'); //
 // import netJs from "./net/httpMethod";
 // import mixJs from "./net/mixTest";
 
+var navigator = weex.requireModule('navigator');
 module.exports = {
     data: function data() {
         return {
+            logo: 'http://img2.ph.126.net/12MZEnxM2E35rMPvTCrYRg==/6632712635095805282.jpg',
             txtInput: '',
             txtChange: '',
             txtReturnType: '',
             txtSelection: '',
             autoFocus: false,
-            totalCount: 0
+            totalCount: 0,
+            boxes: []
         };
     },
     created: function created() {
         // this.mix_test();
-        console.log("created：" + this.totalCount);
+        console.log("created!");
     },
     methods: {
-        jumpIn: function jumpIn(event) {
+        jumpIn: function jumpIn(_index) {
+            var _this = this;
+
+            console.log("index:" + _index);
             var url = weex.config.bundleUrl; //获取当前路径
             console.log(url);
-            url = url.split('/').slice(0, -1).join('/') + '/index.html'; //拼接当前路径到要跳转的文件
+            url = url.split('/').slice(0, -1).join('/') + '/player.html'; //拼接当前路径到要跳转的文件
             console.log(url);
             navigator.push({
                 url: url,
                 animated: 'true'
             }, function (event) {
                 // 完成后执行的操作
+            });
+            storage.setItem('vid', this.boxes[_index].id, function (event) {
+                console.log('set success:' + _this.boxes[_index].id);
             });
         },
         jumpOut: function jumpOut() {
@@ -20962,6 +21001,7 @@ module.exports = {
             //输入完毕回车或失去焦点时触发
             this.txtChange = event.value;
             console.log('onchange', event.value);
+            this.search(this.txtInput);
         },
         oninput: function oninput(event) {
             //输入时触发
@@ -20970,7 +21010,7 @@ module.exports = {
         },
         httpCallback: function httpCallback(val) {
             //获得HTTP请求数据后的回调
-            this.totalCount = val;
+            this.boxes = val;
         }
     }
 };
@@ -21003,9 +21043,8 @@ function httpReq(key, httpCallback) {
             this.getJsonpResult = "request failed";
             httpCallback(0);
         } else {
-            var _count = parseInfo(ret.data);
-            console.log('count:' + _count);
-            httpCallback(_count);
+            var _objArray = parseInfo(ret.data);
+            httpCallback(_objArray);
         }
     });
 }
@@ -21019,7 +21058,7 @@ function parseInfo(_info) {
         // console.log('title:'+objArray[i].title);
         console.log('title:' + objArray[i].id);
     }
-    return objArray.length;
+    return objArray;
 }
 
 /***/ }),
@@ -21092,7 +21131,45 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "height": "1pt"
     }),
     style: (_vm.$processStyle(undefined))
-  })])
+  }), _vm._v(" "), _c('list', {
+    staticClass: "videoList",
+    staticStyle: _vm.$processStyle(undefined),
+    style: (_vm.$processStyle(undefined))
+  }, _vm._l((_vm.boxes), function(item, index) {
+    return _c('cell', {
+      staticClass: "cell",
+      staticStyle: _vm.$processStyle(undefined),
+      style: (_vm.$processStyle(undefined)),
+      on: {
+        "click": function($event) {
+          _vm.jumpIn(index)
+        }
+      }
+    }, [_c('div', {
+      staticClass: "inlineBox",
+      staticStyle: _vm.$processStyle(undefined),
+      style: (_vm.$processStyle(undefined))
+    }, [_c('image', {
+      staticClass: "imageBox",
+      staticStyle: _vm.$processStyle(undefined),
+      style: (_vm.$processStyle(undefined)),
+      attrs: {
+        "src": item.imageUrl
+      }
+    })]), _vm._v(" "), _c('div', {
+      staticClass: "inlineBox, cellText",
+      staticStyle: _vm.$processStyle(undefined),
+      style: (_vm.$processStyle(undefined))
+    }, [_c('text', {
+      staticClass: "hintText",
+      staticStyle: _vm.$processStyle(undefined),
+      style: (_vm.$processStyle(undefined))
+    }, [_vm._v(_vm._s(item.title))]), _c('br'), _vm._v(" "), _c('text', {
+      staticClass: "hintText",
+      staticStyle: _vm.$processStyle(undefined),
+      style: (_vm.$processStyle(undefined))
+    }, [_vm._v("播放：" + _vm._s(item.click))])])])
+  }))], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

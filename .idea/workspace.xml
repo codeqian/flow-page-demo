@@ -2,12 +2,66 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a79bebdb-d326-4b54-9459-512b46b24a14" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/player.vue" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/android.config.json" afterPath="$PROJECT_DIR$/android.config.json" />
+      <change beforePath="$PROJECT_DIR$/dist/index.js" afterPath="$PROJECT_DIR$/dist/index.js" />
+      <change beforePath="$PROJECT_DIR$/dist/index.web.js" afterPath="$PROJECT_DIR$/dist/index.web.js" />
       <change beforePath="$PROJECT_DIR$/dist/listpage.js" afterPath="$PROJECT_DIR$/dist/listpage.js" />
+      <change beforePath="$PROJECT_DIR$/dist/listpage.web.js" afterPath="$PROJECT_DIR$/dist/listpage.web.js" />
+      <change beforePath="$PROJECT_DIR$/dist/player.js" afterPath="$PROJECT_DIR$/dist/player.js" />
       <change beforePath="$PROJECT_DIR$/dist/test.js" afterPath="$PROJECT_DIR$/dist/test.js" />
+      <change beforePath="$PROJECT_DIR$/dist/test.web.js" afterPath="$PROJECT_DIR$/dist/test.web.js" />
       <change beforePath="$PROJECT_DIR$/dist/views/videoPreview.js" afterPath="$PROJECT_DIR$/dist/views/videoPreview.js" />
+      <change beforePath="$PROJECT_DIR$/dist/views/videoPreview.web.js" afterPath="$PROJECT_DIR$/dist/views/videoPreview.web.js" />
+      <change beforePath="$PROJECT_DIR$/npm-shrinkwrap.json" afterPath="$PROJECT_DIR$/npm-shrinkwrap.json" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.bin" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.lock" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/android_arch_core_common_1_0_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/android_arch_lifecycle_common_1_0_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/android_arch_lifecycle_runtime_1_0_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_alibaba_fastjson_1_1_46_android_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_animated_vector_drawable_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_appcompat_v7_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_design_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_recyclerview_v7_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_annotations_26_1_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_compat_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_core_ui_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_core_utils_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_fragment_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_media_compat_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_v4_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_vector_drawable_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_transition_26_1_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_google_zxing_core_3_2_1_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_journeyapps_zxing_android_embedded_3_4_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_squareup_okhttp_okhttp_2_3_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_squareup_okhttp_okhttp_ws_2_3_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_squareup_okio_okio_1_3_0_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_squareup_picasso_picasso_2_5_2_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weex_inspector_0_10_0_5.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weex_sdk_0_16_0.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weexplugin_annotation_1_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weexplugin_loader_1_3.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weexplugin_processor_1_3_jar.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/misc.xml" afterPath="$PROJECT_DIR$/platforms/android/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/workspace.xml" afterPath="$PROJECT_DIR$/platforms/android/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/android.iml" afterPath="$PROJECT_DIR$/platforms/android/android.iml" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/app.iml" afterPath="$PROJECT_DIR$/platforms/android/app/app.iml" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/build.gradle" afterPath="$PROJECT_DIR$/platforms/android/app/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/index.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/index.js" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/listpage.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/listpage.js" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/test.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/test.js" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/app_config.xml" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/app_config.xml" />
+      <change beforePath="$PROJECT_DIR$/platforms/android/build.gradle" afterPath="$PROJECT_DIR$/platforms/android/build.gradle" />
+      <change beforePath="$PROJECT_DIR$/release/web/index.html" afterPath="$PROJECT_DIR$/release/web/index.html" />
+      <change beforePath="$PROJECT_DIR$/release/web/listpage.html" afterPath="$PROJECT_DIR$/release/web/listpage.html" />
+      <change beforePath="$PROJECT_DIR$/release/web/test.html" afterPath="$PROJECT_DIR$/release/web/test.html" />
+      <change beforePath="$PROJECT_DIR$/release/web/views/videoPreview.html" afterPath="$PROJECT_DIR$/release/web/views/videoPreview.html" />
       <change beforePath="$PROJECT_DIR$/src/listpage.vue" afterPath="$PROJECT_DIR$/src/listpage.vue" />
+      <change beforePath="$PROJECT_DIR$/src/net/httpFunction.js" afterPath="$PROJECT_DIR$/src/net/httpFunction.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,8 +78,8 @@
       <file leaf-file-name="httpFunction.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/httpFunction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="484">
+              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -34,8 +88,18 @@
       <file leaf-file-name="player.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/player.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="374">
+              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="792">
+              <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -44,18 +108,8 @@
       <file leaf-file-name="listpage.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listpage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/webpack.config.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+            <state relative-caret-position="22">
+              <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -85,6 +139,7 @@
       <find>testJs</find>
       <find>logo</find>
       <find>title</find>
+      <find>&lt;br</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -107,10 +162,11 @@
         <option value="$PROJECT_DIR$/src/net/httpMethod.js" />
         <option value="$PROJECT_DIR$/src/net/mixTest.js" />
         <option value="$PROJECT_DIR$/src/views/videoPreview.vue" />
-        <option value="$PROJECT_DIR$/src/index.vue" />
-        <option value="$PROJECT_DIR$/src/listpage.vue" />
         <option value="$PROJECT_DIR$/src/player.vue" />
         <option value="$PROJECT_DIR$/src/net/httpFunction.js" />
+        <option value="$PROJECT_DIR$/android.config.json" />
+        <option value="$PROJECT_DIR$/src/listpage.vue" />
+        <option value="$PROJECT_DIR$/src/index.vue" />
       </list>
     </option>
   </component>
@@ -296,12 +352,18 @@
       <workItem from="1521679184680" duration="23274000" />
       <workItem from="1521765675195" duration="19114000" />
       <workItem from="1522036001009" duration="3191000" />
-      <workItem from="1522111997612" duration="10350000" />
+      <workItem from="1522111997612" duration="14436000" />
+      <workItem from="1522198355519" duration="5888000" />
+      <workItem from="1525223175357" duration="3261000" />
+      <workItem from="1525311589408" duration="16960000" />
+      <workItem from="1525400805497" duration="11309000" />
+      <workItem from="1525654550776" duration="22250000" />
+      <workItem from="1525740547813" duration="12742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106969000" />
+    <option name="totallyTimeSpent" value="183465000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -348,6 +410,118 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/httpFunction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="72" lean-forward="false" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listpage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="60" column="22" lean-forward="false" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="14" lean-forward="true" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/httpFunction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="72" lean-forward="false" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="65" lean-forward="false" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/listpage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="68" lean-forward="false" selection-start-line="24" selection-start-column="68" selection-end-line="24" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/net/httpFunction.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -484,13 +658,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="15" column="78" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.temp/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -547,10 +714,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/weex-vue-render/dist/index.common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="9702" column="2" lean-forward="false" selection-start-line="9702" selection-start-column="2" selection-end-line="9702" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android.config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="25" lean-forward="true" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        <state relative-caret-position="792">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -562,34 +767,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/weex-vue-render/dist/index.common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="9702" column="2" lean-forward="false" selection-start-line="9702" selection-start-column="2" selection-end-line="9702" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/listpage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="123" column="31" lean-forward="false" selection-start-line="123" selection-start-column="31" selection-end-line="123" selection-end-column="31" />
+        <state relative-caret-position="22">
+          <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/httpFunction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="484">
+          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/player.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="374">
+          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding />
         </state>
       </provider>

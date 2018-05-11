@@ -20834,7 +20834,7 @@ exports = module.exports = __webpack_require__(6)(false);
 
 
 // module
-exports.push([module.i, "\n.wrapper[data-v-164df028] {\n  justify-content: center;\n  align-items: center;\n}\n.mainBody[data-v-164df028]{\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n  width: 100%;\n}\n.foot[data-v-164df028]{\n  vert-align:bottom ;\n  horiz-align: center;\n}\n.logo[data-v-164df028] {\n  width: 474wx;\n  height: 632wx;\n}\n.greeting[data-v-164df028] {\n  margin: 20px;\n  font-size: 50px;\n  color: #41B883;\n}\n.buttonText[data-v-164df028]{\n  margin: 10px;\n  font-size: 80px;\n  color: #5f6bff;\n  /*padding: 10px;*/\n  /*border-color: #9392c9;*/\n  /*border-width: 5px;*/\n  /*border-style: solid;*/\n}\n.hintText[data-v-164df028]{\n  font-size: 20pt;\n  color: #676569;\n}\n.message[data-v-164df028] {\n  margin: 30px;\n  font-size: 32px;\n  color: #727272;\n}\n", ""]);
+exports.push([module.i, "\n.wrapper[data-v-164df028] {\n  justify-content: center;\n  align-items: center;\n}\n.mainBody[data-v-164df028]{\n  justify-content: center;\n  align-items: center;\n  height: 100%;\n  width: 100%;\n}\n.foot[data-v-164df028]{\n  vert-align:bottom ;\n  horiz-align: center;\n}\n.logoImage[data-v-164df028] {\n  width: 474wx;\n  height: 632wx;\n}\n.greeting[data-v-164df028] {\n  margin: 20px;\n  font-size: 50px;\n  color: #41B883;\n}\n.buttonText[data-v-164df028]{\n  margin: 10px;\n  font-size: 80px;\n  color: #5f6bff;\n  /*padding: 10px;*/\n  /*border-color: #9392c9;*/\n  /*border-width: 5px;*/\n  /*border-style: solid;*/\n}\n.hintText[data-v-164df028]{\n  font-size: 20pt;\n  color: #676569;\n}\n", ""]);
 
 // exports
 
@@ -20849,8 +20849,6 @@ exports.push([module.i, "\n.wrapper[data-v-164df028] {\n  justify-content: cente
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-//
-//
 //
 //
 //
@@ -20910,7 +20908,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticStyle: _vm.$processStyle(undefined),
     style: (_vm.$processStyle(undefined))
   }, [_c('image', {
-    staticClass: "logo",
+    staticClass: "logoImage",
     staticStyle: _vm.$processStyle(undefined),
     style: (_vm.$processStyle(undefined)),
     attrs: {
