@@ -7,7 +7,7 @@ export default {
             var me = this;
             //文字转码
             var keyWord=encodeURI(key);
-            var url="http://open.boosj.com/search/video/by_keywords?category=1362&keywords="+keyWord+"&size=20&page=1";
+            var url="http://open.abc.com/search/video/by_keywords?category=1362&keywords="+keyWord+"&size=20&page=1";
             console.log("request http for "+url);
             stream.fetch({
                 method: 'GET',

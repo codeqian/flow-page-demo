@@ -3,65 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="a79bebdb-d326-4b54-9459-512b46b24a14" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/android.config.json" afterPath="$PROJECT_DIR$/android.config.json" />
-      <change beforePath="$PROJECT_DIR$/dist/index.js" afterPath="$PROJECT_DIR$/dist/index.js" />
-      <change beforePath="$PROJECT_DIR$/dist/index.web.js" afterPath="$PROJECT_DIR$/dist/index.web.js" />
-      <change beforePath="$PROJECT_DIR$/dist/listpage.js" afterPath="$PROJECT_DIR$/dist/listpage.js" />
-      <change beforePath="$PROJECT_DIR$/dist/listpage.web.js" afterPath="$PROJECT_DIR$/dist/listpage.web.js" />
-      <change beforePath="$PROJECT_DIR$/dist/player.js" afterPath="$PROJECT_DIR$/dist/player.js" />
-      <change beforePath="$PROJECT_DIR$/dist/test.js" afterPath="$PROJECT_DIR$/dist/test.js" />
-      <change beforePath="$PROJECT_DIR$/dist/test.web.js" afterPath="$PROJECT_DIR$/dist/test.web.js" />
-      <change beforePath="$PROJECT_DIR$/dist/views/videoPreview.js" afterPath="$PROJECT_DIR$/dist/views/videoPreview.js" />
-      <change beforePath="$PROJECT_DIR$/dist/views/videoPreview.web.js" afterPath="$PROJECT_DIR$/dist/views/videoPreview.web.js" />
-      <change beforePath="$PROJECT_DIR$/npm-shrinkwrap.json" afterPath="$PROJECT_DIR$/npm-shrinkwrap.json" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/platforms/android/.gradle/4.1/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/android_arch_core_common_1_0_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/android_arch_lifecycle_common_1_0_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/android_arch_lifecycle_runtime_1_0_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_alibaba_fastjson_1_1_46_android_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_animated_vector_drawable_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_appcompat_v7_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_design_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_recyclerview_v7_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_annotations_26_1_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_compat_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_core_ui_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_core_utils_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_fragment_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_media_compat_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_v4_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_support_vector_drawable_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_android_support_transition_26_1_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_google_code_findbugs_jsr305_2_0_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_google_zxing_core_3_2_1_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_journeyapps_zxing_android_embedded_3_4_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_squareup_okhttp_okhttp_2_3_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_squareup_okhttp_okhttp_ws_2_3_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_squareup_okio_okio_1_3_0_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_squareup_picasso_picasso_2_5_2_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weex_inspector_0_10_0_5.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weex_sdk_0_16_0.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weexplugin_annotation_1_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weexplugin_loader_1_3.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/libraries/com_taobao_android_weexplugin_processor_1_3_jar.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/misc.xml" afterPath="$PROJECT_DIR$/platforms/android/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/workspace.xml" afterPath="$PROJECT_DIR$/platforms/android/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/android.iml" afterPath="$PROJECT_DIR$/platforms/android/android.iml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/app.iml" afterPath="$PROJECT_DIR$/platforms/android/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/build.gradle" afterPath="$PROJECT_DIR$/platforms/android/app/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/index.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/index.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/listpage.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/listpage.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/test.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/dist/test.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/values/strings.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/app_config.xml" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/xml/app_config.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/build.gradle" afterPath="$PROJECT_DIR$/platforms/android/build.gradle" />
-      <change beforePath="$PROJECT_DIR$/release/web/index.html" afterPath="$PROJECT_DIR$/release/web/index.html" />
-      <change beforePath="$PROJECT_DIR$/release/web/listpage.html" afterPath="$PROJECT_DIR$/release/web/listpage.html" />
-      <change beforePath="$PROJECT_DIR$/release/web/test.html" afterPath="$PROJECT_DIR$/release/web/test.html" />
-      <change beforePath="$PROJECT_DIR$/release/web/views/videoPreview.html" afterPath="$PROJECT_DIR$/release/web/views/videoPreview.html" />
-      <change beforePath="$PROJECT_DIR$/src/listpage.vue" afterPath="$PROJECT_DIR$/src/listpage.vue" />
-      <change beforePath="$PROJECT_DIR$/src/net/httpFunction.js" afterPath="$PROJECT_DIR$/src/net/httpFunction.js" />
+      <change beforePath="$PROJECT_DIR$/src/net/httpMethod.js" afterPath="$PROJECT_DIR$/src/net/httpMethod.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -78,19 +20,21 @@
       <file leaf-file-name="httpFunction.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/net/httpFunction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+            <state relative-caret-position="377">
+              <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="player.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/player.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="462">
+              <caret line="58" column="21" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+              <folding>
+                <element signature="e#552#1590#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,8 +42,28 @@
       <file leaf-file-name="index.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="792">
-              <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            <state relative-caret-position="748">
+              <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="httpMethod.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/net/httpMethod.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="484">
+              <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mixTest.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/net/mixTest.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -108,8 +72,8 @@
       <file leaf-file-name="listpage.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/listpage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
-              <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+            <state relative-caret-position="462">
+              <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -159,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/net/testfunction.js" />
         <option value="$PROJECT_DIR$/src/net/httpfunction.js" />
         <option value="$PROJECT_DIR$/src/net/httpRequests.js" />
-        <option value="$PROJECT_DIR$/src/net/httpMethod.js" />
         <option value="$PROJECT_DIR$/src/net/mixTest.js" />
         <option value="$PROJECT_DIR$/src/views/videoPreview.vue" />
         <option value="$PROJECT_DIR$/src/player.vue" />
@@ -167,6 +130,7 @@
         <option value="$PROJECT_DIR$/android.config.json" />
         <option value="$PROJECT_DIR$/src/listpage.vue" />
         <option value="$PROJECT_DIR$/src/index.vue" />
+        <option value="$PROJECT_DIR$/src/net/httpMethod.js" />
       </list>
     </option>
   </component>
@@ -205,6 +169,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -233,8 +199,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
@@ -242,7 +206,7 @@
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="F:/demo/weex-hackernews-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../listDemoByIonic" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -359,31 +323,36 @@
       <workItem from="1525400805497" duration="11309000" />
       <workItem from="1525654550776" duration="22250000" />
       <workItem from="1525740547813" duration="12742000" />
+      <workItem from="1527669858969" duration="399000" />
+      <workItem from="1528268319320" duration="57000" />
+      <workItem from="1528358596192" duration="2044000" />
+      <workItem from="1528429384809" duration="5053000" />
+      <workItem from="1528684865853" duration="197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183465000" />
+    <option name="totallyTimeSpent" value="191215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Weex Documents" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Weex Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.159375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Weex Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30625" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -414,7 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -438,7 +406,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="e#552#1590#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -446,7 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="72" lean-forward="false" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -462,7 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -486,7 +454,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="23" column="48" lean-forward="false" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="e#552#1590#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -494,7 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="2" column="72" lean-forward="false" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -510,7 +479,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -534,7 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -542,7 +509,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="18" column="28" lean-forward="true" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding />
+          <folding>
+            <element signature="e#552#1590#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -558,7 +527,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-          <folding />
+          <folding>
+            <element signature="e#552#1590#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -679,20 +650,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/mixTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/net/httpMethod.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="15" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/entry.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -735,14 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="792">
-          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -755,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -763,30 +711,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/player.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="58" column="21" lean-forward="false" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+          <folding>
+            <element signature="e#552#1590#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/listpage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="91" column="24" lean-forward="false" selection-start-line="91" selection-start-column="24" selection-end-line="91" selection-end-column="24" />
+        <state relative-caret-position="462">
+          <caret line="21" column="65" lean-forward="false" selection-start-line="21" selection-start-column="65" selection-end-line="21" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="14" lean-forward="false" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/net/mixTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="9" lean-forward="false" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/httpFunction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="33" lean-forward="true" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+        <state relative-caret-position="377">
+          <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/player.vue">
+    <entry file="file://$PROJECT_DIR$/src/net/httpMethod.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="25" column="10" lean-forward="true" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
+        <state relative-caret-position="484">
+          <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding />
         </state>
       </provider>
